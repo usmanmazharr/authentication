@@ -4,37 +4,31 @@ import { TextInput } from 'react-native';
 
 const FirstScreen =({navigation}) => {
     function navigate(){
-        navigation.navigate('SignUp');
-    }
-    function navigate1(){
         navigation.navigate('SignIn');
     }
+    
     return (
       
         <View style={styles.mainView}>
             <View style = {styles.TopView}>
-            <Image style={styles.ImageStyle} source={require('../assets/logo.png')}
+            <Image style={styles.ImageStyle} source={require('../assets/splash.jpg')}
             />
             </View>
             
 
             <View style = {styles.BottomView}>
                 <View style = {styles.bottom1}>
-                <Text style={styles.text}>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    It has survived not only five centuries, but also the leap into electronic typesetting, 
-                    remaining essentially unchanged
+                <Text style={styles.Heading}>
+                    Learning Management System
                 </Text>
                 </View>
 
                 <View style={styles.FormView}>
                
                 <TouchableOpacity style = {styles.Button}>
-                    <Text style = {styles.ButtonText} onPress={navigate}>Sign Up</Text>
+                    <Text style = {styles.ButtonText} onPress={navigate}>Get Started</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style = {styles.Button1} >
-                    <Text style = {styles.ButtonText1} onPress={navigate1}>Sign In</Text>
-                </TouchableOpacity>
+            
                 </View>
             </View>
         </View>
@@ -60,16 +54,23 @@ const styles = StyleSheet.create({
         //backgroundColor:'#000'
     },
 
-    BottomView : {
-        width: '100%',
-        height: '55%',
-        backgroundColor:'#000',
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
-        justifyContent: 'center',
+    // BottomView : {
+    //     width: '100%',
+    //     height: '55%',
+    //     backgroundColor:'#000',
+    //     borderTopLeftRadius: 30,
+    //     borderTopRightRadius: 30,
+    //     justifyContent: 'center',
         
-    },
+    // },
 
+    Heading: {
+        color: "#000",
+        fontSize: 50,
+        fontWeight: "bold",
+        marginLeft: 30,
+        marginTop: 60,
+      },
     
     FormView:{
         width: '100%',
@@ -82,7 +83,8 @@ const styles = StyleSheet.create({
     ImageStyle:{
         alignItems: 'center',
         flex:1,
-        width: '40%',
+        width: '100%',
+        height:'100%',
         resizeMode: 'contain',
     },
 

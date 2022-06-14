@@ -5,6 +5,7 @@ import {createStackNavigator} from '@react-navigation/stack'
 import SignIn from './Screens/SignIn'
 import SignUp from './Screens/SignUp'
 import FirstScreen from './Screens/FirstScreen'
+import MainScreen from './Screens/MainScreen'
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -15,9 +16,13 @@ const App:() => Node = () => {
 
     <NavigationContainer>
         <Stack.Navigator>
+
             <Stack.Screen name= "FirstScreen" component = {FirstScreen} options={{headerShown:false}}/>
             <Stack.Screen name= "SignIn" component ={SignIn} options={{headerShown:false}} />
+            <Stack.Screen name= "MainScreen" component = {MainScreen} options={{headerShown:false}}/>
             <Stack.Screen name="SignUp" component ={SignUp} options={{headerShown:false}}/>
+           
+
         </Stack.Navigator>
     </NavigationContainer>
 
